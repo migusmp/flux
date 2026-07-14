@@ -1,6 +1,9 @@
-[package]
-name = "flux"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+resolver = "2"
 
-[dependencies]
+members = [
+    "crates/core",
+    "crates/tui",
+    "crates/daemon",
+    "crates/cli",
+]
