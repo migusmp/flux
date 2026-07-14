@@ -7,3 +7,10 @@ members = [
     "crates/daemon",
     "crates/cli",
 ]
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_yaml = "0.9"
+tokio = { version = "1", features = ["full"] }
+ratatui = "0.26"
+crossterm = "0.27"
