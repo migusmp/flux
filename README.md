@@ -79,7 +79,7 @@ alerts:
 
 ## Roadmap
 
-Flux development is progressing in phases, from a basic local monitor to remote communication between multiple Flux instances (without relying on VPNs or manually configured tunnels). Check the complete roadmap in [`flux-roadmap.md`](./flux-roadmap.md).
+Flux development is progressing in phases, from a basic local monitor to remote communication between multiple Flux instances (without relying on VPNs or manually configured tunnels). Check the complete roadmap in [`flux_roadmap.md`](./flux_roadmap.md).
 
 ## Stack técnico
 
