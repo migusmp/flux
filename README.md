@@ -9,9 +9,9 @@
 
 <div align="center">
 
-### TUI de monitorización y logs para DevOps
+### DevOps monitoring and logging TUI
 
-*Todo el estado de tu VPS, en una sola terminal.*
+*Your entire VPS state, in a single terminal.*
 
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
@@ -24,40 +24,42 @@
 
 ## ¿Qué es Flux?
 
-**Flux** es una herramienta TUI (Terminal User Interface) escrita en Rust, pensada para monitorizar procesos, contenedores y logs de un servidor VPS sin salir de la terminal. Nace de una necesidad muy concreta: tener a mano el estado real de tus servicios (CPU, RAM, contenedores Docker, logs) con la misma rapidez con la que abrirías `htop`, pero orientado a stacks de DevOps modernos.
+What is Flux?
 
-Nada de dashboards pesados en el navegador. Un solo binario, una terminal, y todo el flujo de información de tu infraestructura delante.
+Flux is a TUI (Terminal User Interface) tool written in Rust, designed to monitor processes, containers, and logs from a VPS server without leaving the terminal. It was born from a very specific need: having the real-time state of your services (CPU, RAM, Docker containers, logs) available with the same speed as opening htop, but tailored for modern DevOps stacks.
 
-## Características
+No heavy browser dashboards. A single binary, a terminal, and your infrastructure information right in front of you.
 
-- 📊 **Monitorización en tiempo real** — CPU, RAM, disco y swap del host
-- 🐳 **Contenedores Docker** — estado, consumo de recursos y reinicios por contenedor
-- 📜 **Logs en vivo** — tail, filtrado y búsqueda sin salir de la TUI
-- ⚙️ **Configuración declarativa** — define qué observar en un archivo `.yaml` o `.config`
-- 🔄 **Modo background (daemon)** — Flux sigue recolectando datos aunque cierres la TUI, y puede enviarlos a un backend o frontend propio
-- 🔔 **Alertas configurables** — avisos por umbral (ej. RAM al 80%) directamente en la interfaz
+## Features
 
-## Instalación
+- 📊 Real-time monitoring — CPU, RAM, disk, and swap usage of the host
+- 🐳 Docker containers — status, resource usage, and container restarts
+- 📜 Live logs — tail, filtering, and searching without leaving the TUI
+- ⚙️ Declarative configuration — define what to monitor in a .yaml or .config file
+- 🔄 Background mode (daemon) — Flux keeps collecting data even after closing the TUI, and can send it to your own backend or frontend
+- 🔔 Configurable alerts — threshold-based notifications (e.g. RAM above 80%) directly in the interface
+
+## Installation
 
 ```bash
 cargo install flux-tui
 ```
 
-*(Próximamente disponible en crates.io)*
+*(Coming soon to crates.io)*
 
-## Uso rápido
+## Quick start
 
 ```bash
-# Arrancar la TUI apuntando a tu configuración
+# Start the TUI using your configuration
 flux --config flux.yaml
 
-# Arrancar solo el daemon en segundo plano
+# Start only the background daemon
 flux daemon start --config flux.yaml
 ```
 
-## Configuración
+## Configuration
 
-Flux se configura mediante un archivo `.yaml` donde defines qué logs y qué procesos quieres observar:
+Flux is configured through a `.yaml` file where you define which logs and processes you want to monitor:
 
 ```yaml
 targets:
@@ -77,24 +79,24 @@ alerts:
 
 ## Roadmap
 
-El desarrollo de Flux avanza por fases, desde el monitor local básico hasta la conexión remota entre distintas instancias de Flux (sin depender de VPN ni túneles manuales). Consulta el roadmap completo en [`flux-roadmap.md`](./flux-roadmap.md).
+Flux development is progressing in phases, from a basic local monitor to remote communication between multiple Flux instances (without relying on VPNs or manually configured tunnels). Check the complete roadmap in [`flux-roadmap.md`](./flux-roadmap.md).
 
 ## Stack técnico
 
 | Componente | Tecnología |
 |---|---|
-| Interfaz TUI | `ratatui` + `crossterm` |
-| Métricas de sistema | `sysinfo` |
-| Integración Docker | `bollard` |
-| Configuración | `serde` + `serde_yaml` |
-| Persistencia local | `rusqlite` |
+| TUI interface | `ratatui` + `crossterm` |
+| System metrics | `sysinfo` |
+| Docker integration | `bollard` |
+| Configuration | `serde` + `serde_yaml` |
+| Local persistence | `rusqlite` |
 
-## Licencia
+## License
 
 MIT
 
 ---
 
 <div align="center">
-<sub>Construido con 🦀 Rust, para quienes viven en la terminal.</sub>
+<sub>Built with 🦀 Rust, for those who live in the terminal.</sub>
 </div>
