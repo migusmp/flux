@@ -6,4 +6,4 @@ edition = "2024"
 [dependencies]
 tokio.workspace = true
 ratatui.workspace = true
-flux_tui = { path = "../flux_tui" }
+core = { path = "../core" }

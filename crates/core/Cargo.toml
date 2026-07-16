@@ -8,3 +8,5 @@ ratatui.workspace = true
 serde.workspace = true
 serde_yaml.workspace = true
 sysinfo = "0.39.6"
+
+flux_tui = { path = "../flux_tui" }

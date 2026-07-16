@@ -77,7 +77,7 @@ checksum = "2a4385e2e34eb35d6b3efe798b9eb88096925d87726c0798709bf56d9ed84af3"
 name = "app"
 version = "0.1.0"
 dependencies = [
- "flux_tui",
+ "core",
  "ratatui",
  "tokio",
 ]
@@ -324,6 +324,7 @@ dependencies = [
 name = "core"
 version = "0.1.0"
 dependencies = [
+ "flux_tui",
  "ratatui",
  "serde",
  "serde_yaml",
@@ -583,7 +584,6 @@ checksum = "0ce7134b9999ecaf8bcd65542e436736ef32ddca1b3e06094cb6ec5755203b80"
 name = "flux_tui"
 version = "0.1.0"
 dependencies = [
- "core",
  "crossterm",
  "ratatui",
  "tokio",
