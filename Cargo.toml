@@ -3,14 +3,14 @@ resolver = "2"
 
 members = [
     "crates/core",
-    "crates/tui",
+    "crates/flux_tui",
     "crates/daemon",
-    "crates/cli",
+    "crates/cli", "crates/app",
 ]
 
 [workspace.dependencies]
 serde = { version = "1", features = ["derive"] }
 serde_yaml = "0.9"
 tokio = { version = "1", features = ["full"] }
-ratatui = "0.26"
-crossterm = "0.27"
+ratatui = "0.30.2"
+crossterm = "0.29"

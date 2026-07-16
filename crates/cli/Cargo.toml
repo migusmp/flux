@@ -7,4 +7,4 @@ edition = "2024"
 clap = { version = "4", features = ["derive"] }
 
 core = { path = "../core" }
-tui = { path = "../tui" }
+flux_tui = { path = "../flux_tui" }

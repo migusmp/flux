@@ -1,10 +1,9 @@
 [package]
-name = "tui"
+name = "app"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+tokio.workspace = true
 ratatui.workspace = true
-crossterm.workspace = true
-
-core = { path = "../core" }
+flux_tui = { path = "../flux_tui" }

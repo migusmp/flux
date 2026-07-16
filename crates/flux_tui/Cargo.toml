@@ -1,0 +1,11 @@
+[package]
+name = "flux_tui"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+ratatui.workspace = true
+crossterm.workspace = true
+tokio.workspace = true
+
+core = { path = "../core" }
