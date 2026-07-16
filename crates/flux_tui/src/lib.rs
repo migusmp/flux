@@ -1,4 +1,4 @@
-use ratatui::{DefaultTerminal, Frame};
+use ratatui::{widgets::Block, DefaultTerminal, Frame};
 
 #[derive(Debug, Default)]
 pub struct FluxTui {}
@@ -14,6 +14,10 @@ impl FluxTui {
     }
 
     fn render(frame: &mut Frame) {
+        let outer_block = Block::bordered().title("Outer");
+        let outer_area = frame.area();
+
         frame.render_widget("hello world", frame.area());
+        frame.render_widget(outer_block, outer_area);
     }
 }
